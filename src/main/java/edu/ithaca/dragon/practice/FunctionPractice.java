@@ -9,14 +9,32 @@ public class FunctionPractice {
      * @throws IllegalArgumentException if any of the numbers is negative
      */
     public static int largestOfThree(int first, int second, int third){
-        throw new RuntimeException("Not Implemented");
+        if (first >= second && first >= third){
+            return first;
+        }
+        if (second >= first && second >= third){
+            return second;
+        }
+        else {
+            return third;
+        }
     }
     
     /**
      * @return the final price at register of the given item after discount and tax applied
      */
     public static double calcSalePrice(double originalPrice, double discountPercent, double salesTax){
-        throw new RuntimeException("Not Implemented");
+        double finalPrice;
+        double discountOff;
+        double taxAdded;
+
+        discountOff = originalPrice * (discountPercent/100);
+        finalPrice = originalPrice - discountOff;
+        taxAdded = finalPrice * (salesTax/100);
+        finalPrice = finalPrice + taxAdded;
+
+        return finalPrice;
+
     }
 
     /**
@@ -39,7 +57,13 @@ public class FunctionPractice {
      * If the largest number occurs more than once, return the index of the last occurence.
      */
     public static int findLastLargest(List<Integer> numbers){
-        throw new RuntimeException("Not Implemented");
+        int largest = 0;
+        for (int i = 0; i < numbers.size(); i++){
+            if (numbers.get(i) >= numbers.get(i + 1)){
+                largest = i;
+            }
+        }
+        return largest;
     }
 
     /**
