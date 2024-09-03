@@ -8,7 +8,7 @@ public class Circle {
      */
     public Circle(double radius){
         this.radius = radius;
-        if (radius > 0){
+        if (radius <= 0){
             throw new IllegalArgumentException("Can't be non positive number.");
         }
     }
@@ -17,7 +17,8 @@ public class Circle {
      * @return the area of this circle
      */
     public double calcArea(){
-        return Math.PI * (Math.pow(radius, 2));
+        double area = Math.PI * Math.pow(radius, 2);
+        return area;
     }
 
     /**
