@@ -1,7 +1,7 @@
 package edu.ithaca.dragon.shapes;
 
 public class Circle {
-    private double radius;
+    double radius;
 
     /**
      * @throws IllegalArgumentException if radius is not a positive number

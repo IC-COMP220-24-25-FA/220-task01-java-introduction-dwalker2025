@@ -30,6 +30,35 @@ public class CircleTest {
     }
 
     @Test
+    public void doubleSizeTest(){
+        Circle myCircle = new Circle(1);
+        myCircle.doubleSize();
+        assertEquals(2, myCircle.radius);
+
+        myCircle = new Circle(10);
+        myCircle.doubleSize();
+        assertEquals(20, myCircle.radius);
+
+        myCircle = new Circle(7);
+        myCircle.doubleSize();
+        assertEquals(14, myCircle.radius);
+
+    }
+
+    @Test
+    public void longestLineWithinTest(){
+        Circle myCircle = new Circle(1);
+        assertEquals(2, myCircle.longestLineWithin());
+
+        myCircle = new Circle(5);
+        assertEquals(10, myCircle.longestLineWithin());
+
+        myCircle = new Circle(0.5);
+        assertEquals(1, myCircle.longestLineWithin());
+
+    }
+
+    @Test
     public void TestConstructorError(){
         assertThrows(IllegalArgumentException.class, () -> new Circle(0));
     }
