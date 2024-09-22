@@ -1,7 +1,7 @@
 package edu.ithaca.dragon.shapes;
 
 public class Circle implements Shape {
-    private double radius;
+    public double radius;
 
     /**
      * @throws IllegalArgumentException if radius is not a positive number
@@ -36,5 +36,12 @@ public class Circle implements Shape {
         diameter = radius * 2;
         return diameter;
 
+    }
+
+    public String toString(){
+        String circle_info;
+        circle_info = "This is a Circle and it's radius is: " + radius + " and the diameter is: " + radius * 2;
+
+        return circle_info;
     }
 }

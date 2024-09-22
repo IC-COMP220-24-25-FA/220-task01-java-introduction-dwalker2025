@@ -41,5 +41,12 @@ public class Triangle implements Shape {
         return (sideA + sideB > sideC) && (sideA + sideC > sideB) && (sideB + sideC > sideA);
     }
 
+    public String toString(){
+        String tri_info;
+        tri_info = "This is a Triangle and the size of side A is: " + sideA + " Side B is: " + sideB + " and side C is: " + sideC;
+
+        return tri_info;
+    }
+
 }
 

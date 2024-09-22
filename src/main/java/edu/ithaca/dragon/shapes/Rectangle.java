@@ -27,5 +27,11 @@ public class Rectangle implements Shape {
     public double longestLineWithin(){
         return Math.sqrt(Math.pow(width, 2) + Math.pow(length, 2));
     }
-    
+
+    public String toString(){
+        String rect_info;
+        rect_info = "This is a Rectangle and it's length is: " + length + " and width is: " + width;
+
+        return rect_info;
+    }
 }
