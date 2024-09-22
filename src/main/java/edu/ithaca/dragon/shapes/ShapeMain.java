@@ -11,8 +11,8 @@ public class ShapeMain {
         List<Rectangle> rectangles = new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
-            double width = 1 + random.nextDouble() * 9;  // Random width between 1 and 10
-            double length = 1 + random.nextDouble() * 9; // Random length between 1 and 10
+            double width = 1 + random.nextDouble() * 9;
+            double length = 1 + random.nextDouble() * 9;
             rectangles.add(new Rectangle(width, length));
         }
 
